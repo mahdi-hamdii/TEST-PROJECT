@@ -10,7 +10,7 @@ import {
   UseGuards,
   Req,
 } from '@nestjs/common';
-import { SprintListDto } from './dto/sprint.list.dto';
+import { SprintListDto } from './dto/Sprint.list.dto';
 import { SprintDto } from './dto/sprint.dto';
 import { CreateSprintDto } from './dto/sprint.create.dto';
 import { SprintService } from './sprint.service';
