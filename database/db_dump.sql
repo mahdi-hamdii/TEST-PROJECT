@@ -111,22 +111,22 @@ ALTER TABLE public.developers OWNER TO "Hamdi.Mahdi";
 -- Data for Name: task; Type: TABLE DATA; Schema: public; Owner: Hamdi.Mahdi
 --
 
-INSERT INTO public.task VALUES ('0166fa6b-22f1-4bac-b715-6e878cdece90', 'Buy groceries', '2022-05-28 10:39:21.709886', '9104c0ef-d6af-47ef-9bbd-7b71ab0e4e26');
-INSERT INTO public.task VALUES ('5ec85af9-ecf2-4a39-b772-5c8df018967c', 'Wash dishes', '2022-05-28 10:39:21.709886', '9104c0ef-d6af-47ef-9bbd-7b71ab0e4e26');
-INSERT INTO public.task VALUES ('098fd1ea-ecb0-4693-9128-8e2a5b96eeb4', 'Shred the outdated documents', '2022-05-28 10:39:21.746085', 'f794689b-a9e2-4404-8aa4-34192f6b8003');
-INSERT INTO public.task VALUES ('afc3f140-c4e0-4770-a014-095de6a9fb4f', 'Archive the old files', '2022-05-28 10:39:21.746085', 'f794689b-a9e2-4404-8aa4-34192f6b8003');
+INSERT INTO public.task VALUES ('0166fa6b-22f1-4bac-b715-6e878cdece90', 'Add edit button', '2022-05-28 10:39:21.709886', '9104c0ef-d6af-47ef-9bbd-7b71ab0e4e26');
+INSERT INTO public.task VALUES ('5ec85af9-ecf2-4a39-b772-5c8df018967c', 'Add delete button', '2022-05-28 10:39:21.709886', '9104c0ef-d6af-47ef-9bbd-7b71ab0e4e26');
+INSERT INTO public.task VALUES ('098fd1ea-ecb0-4693-9128-8e2a5b96eeb4', 'restyle table', '2022-05-28 10:39:21.746085', 'f794689b-a9e2-4404-8aa4-34192f6b8003');
+INSERT INTO public.task VALUES ('afc3f140-c4e0-4770-a014-095de6a9fb4f', 'restyle login page', '2022-05-28 10:39:21.746085', 'f794689b-a9e2-4404-8aa4-34192f6b8003');
 
 
 --
 -- Data for Name: sprint; Type: TABLE DATA; Schema: public; Owner: Hamdi.Mahdi
 --
 
-INSERT INTO public.sprint VALUES ('9104c0ef-d6af-47ef-9bbd-7b71ab0e4e26', 'House chores', NULL, '2022-05-28 10:39:21.709886', '2022-05-28 10:39:21.709886', '57603cd2-533c-4791-8adc-cf3ac1448b7d');
-INSERT INTO public.sprint VALUES ('f794689b-a9e2-4404-8aa4-34192f6b8003', 'Office Chores', NULL, '2022-05-28 10:39:21.746085', '2022-05-28 10:39:21.746085', NULL);
-INSERT INTO public.sprint VALUES ('d9e6d085-6602-43e0-a4f6-2a0c1363d4bc', 'Studying Sprint list', NULL, '2022-05-28 10:39:21.963358', '2022-05-28 10:39:21.963358', NULL);
-INSERT INTO public.sprint VALUES ('fd097652-1cfa-4c98-bff8-d85efc43b007', 'Traveling Sprint  list', NULL, '2022-05-28 10:39:21.964897', '2022-05-28 10:39:21.964897', '57603cd2-533c-4791-8adc-cf3ac1448b7d');
-INSERT INTO public.sprint VALUES ('45123a60-ae65-4911-8ee3-d5a2e7b4a87d', 'Monday Sprint list', NULL, '2022-05-28 10:39:21.974114', '2022-05-28 10:39:21.974114', '57603cd2-533c-4791-8adc-cf3ac1448b7d');
-INSERT INTO public.sprint VALUES ('8d1a2250-b4bf-4c91-8ad7-7c973b65962f', 'Some random Sprint list', 'A new awesome and cool sprint list', '2022-05-28 10:39:21.998489', '2022-05-28 10:39:21.998489', NULL);
+INSERT INTO public.sprint VALUES ('9104c0ef-d6af-47ef-9bbd-7b71ab0e4e26', 'initialisation Sprint ', NULL, '2022-05-28 10:39:21.709886', '2022-05-28 10:39:21.709886', '57603cd2-533c-4791-8adc-cf3ac1448b7d');
+INSERT INTO public.sprint VALUES ('f794689b-a9e2-4404-8aa4-34192f6b8003', 'First Sprint', NULL, '2022-05-28 10:39:21.746085', '2022-05-28 10:39:21.746085', NULL);
+INSERT INTO public.sprint VALUES ('d9e6d085-6602-43e0-a4f6-2a0c1363d4bc', 'Sprint Retro', NULL, '2022-05-28 10:39:21.963358', '2022-05-28 10:39:21.963358', NULL);
+INSERT INTO public.sprint VALUES ('fd097652-1cfa-4c98-bff8-d85efc43b007', 'Third sprint', NULL, '2022-05-28 10:39:21.964897', '2022-05-28 10:39:21.964897', '57603cd2-533c-4791-8adc-cf3ac1448b7d');
+INSERT INTO public.sprint VALUES ('45123a60-ae65-4911-8ee3-d5a2e7b4a87d', 'Third Retro spring', NULL, '2022-05-28 10:39:21.974114', '2022-05-28 10:39:21.974114', '57603cd2-533c-4791-8adc-cf3ac1448b7d');
+INSERT INTO public.sprint VALUES ('8d1a2250-b4bf-4c91-8ad7-7c973b65962f', 'Final sprint', 'final sprint list', '2022-05-28 10:39:21.998489', '2022-05-28 10:39:21.998489', NULL);
 
 
 --
