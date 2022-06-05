@@ -1,3 +1,4 @@
+import { TaskEntity } from './task.entity';
 import {
   Entity,
   PrimaryGeneratedColumn,
@@ -7,20 +8,19 @@ import {
   ManyToOne,
   JoinTable,
 } from 'typeorm';
-import { ProjectEntity } from './project.entity';
-import { TicketEntity } from './ticket.entity';
+import { DeveloperEntity} from './developer.entity';
 
-@Entity('sprint')
+@Entity('todo')
 export class SprintEntity {
   @PrimaryGeneratedColumn('uuid') id: string;
   @Column({ type: 'varchar', nullable: false }) name: string;
   @Column({ type: 'text', nullable: true }) description?: string;
   @CreateDateColumn() createdOn?: Date;
-  @CreateDateColumn() dueDate?: Date;
+  @CreateDateColumn() updatedOn?: Date;
 
-  @ManyToOne((type) => ProjectEntity, { cascade: true })
-  project?: ProjectEntity;
+  @ManyToOne((type) => DeveloperEntity, { cascade: true })
+  owner?: DeveloperEntity;
 
-  @OneToMany((type) => TicketEntity, (ticket) => ticket.todo, { cascade: true })
-  tickets?: TicketEntity[];
+  @OneToMany((type) => TaskEntity, (task) => task.todo, { cascade: true })
+  tasks?: TaskEntity[];
 }
