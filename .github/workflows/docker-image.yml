@@ -41,7 +41,7 @@ jobs:
     - name: Run Unit and Integration tests
       run: |
         npm run test
-    - name: Set up Testing Database and Run End to End Tests.
+    - name: DB Testing & e2e tests.
       run: |
         cat database/db_dump.sql | docker exec -i $(docker ps -q) psql -U ${{secrets.DB_USER}}  -d  ${{secrets.DB_NAME}}
         npm run test:e2e
