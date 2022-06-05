@@ -10,7 +10,7 @@ import {
 } from 'typeorm';
 import { DeveloperEntity} from './developer.entity';
 
-@Entity('todo')
+@Entity('sprint')
 export class SprintEntity {
   @PrimaryGeneratedColumn('uuid') id: string;
   @Column({ type: 'varchar', nullable: false }) name: string;
@@ -21,6 +21,6 @@ export class SprintEntity {
   @ManyToOne((type) => DeveloperEntity, { cascade: true })
   owner?: DeveloperEntity;
 
-  @OneToMany((type) => TaskEntity, (task) => task.todo, { cascade: true })
+  @OneToMany((type) => TaskEntity, (task) => task.sprint, { cascade: true })
   tasks?: TaskEntity[];
 }
