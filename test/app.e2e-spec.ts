@@ -2,7 +2,7 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { INestApplication } from '@nestjs/common';
 import * as request from 'supertest';
 import { AppModule } from './../src/app.module';
-import { SprintService } from '../src/sprint/sprint.service';
+import { SprintService } from './../src/sprint/sprint.service';
 import { DeveloperDto } from '../src/sprint/dto/developer.dto';
 import { DevelopersService } from '../src/sprint/developers.service';
 
