@@ -2,8 +2,7 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { INestApplication } from '@nestjs/common';
 import * as request from 'supertest';
 import { AppModule } from './../src/app.module';
-import { TaskService } from '@sprint/task/task.service';
-import { SprintService } from '@sprint/sprint.service';
+import { SprintService } from '../src/sprint/sprint.service';
 
 describe('AppController (e2e)', () => {
   let app: INestApplication;
