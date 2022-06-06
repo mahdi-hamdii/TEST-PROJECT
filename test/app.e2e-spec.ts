@@ -36,9 +36,9 @@ describe('AppController (e2e)', () => {
       .expect('Hello World!');
   });
 
-  it('/api/tasks (GET)', async () => {
+  it('/api/sprints (GET)', async () => {
     return request(app.getHttpServer())
-      .get('/api/tasks')
+      .get('/api/sprints')
       .expect(200)
       .expect({ sprints: await app.get(SprintService).getAllSprint() });
   });
