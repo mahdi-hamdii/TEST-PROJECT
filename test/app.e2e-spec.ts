@@ -45,15 +45,6 @@ describe('AppController (e2e)', () => {
 
 
 
-  it('/api/tasks (GET)', async () => {
-    return request(app.getHttpServer())
-      .get('/api/tasks')
-      .expect(200)
-      .expect({ tasks: await app.get(TaskService).getAllTasks() });
-  });
-
-
-
 
   afterAll(async () => {
     await app.close();
