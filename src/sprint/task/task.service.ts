@@ -18,7 +18,7 @@ export class TaskService {
   ) {}
 
   async getAllTasks(): Promise<TaskDto[]> {
-    const tasks = await this.taskRepo.find({ where :{} });
+    const tasks = await this.taskRepo.find();
     return tasks.map((task) => toTaskDto(task));
   }
 
