@@ -5,6 +5,7 @@ import { AppModule } from './../src/app.module';
 import { SprintService } from './../src/sprint/sprint.service';
 import { DeveloperDto } from '../src/sprint/dto/developer.dto';
 import { DevelopersService } from '../src/sprint/developers.service';
+import { TaskService } from '@sprint/task/task.service';
 
 describe('AppController (e2e)', () => {
   let app: INestApplication;
@@ -43,25 +44,15 @@ describe('AppController (e2e)', () => {
       .expect({ sprints: await app.get(SprintService).getAllSprint() });
   });
 
-  it('/api/sprints (POST)', async () => {
+
+
+  it('/api/tasks (GET)', async () => {
     return request(app.getHttpServer())
-      .post('/api/sprints')
-      .send({
-        name: 'Newly Posted sprint for Test purpose',
-        description: 'Random description',
-        developerId: dbDeveloper.id,
-      })
-      .expect(201)
-      .then((response) => {
-        const payload = response.body;
-        delete payload.id;
-        expect(payload).toStrictEqual({
-          name: 'Newly Posted sprint for Test purpose',
-          description: 'Random description',
-          owner: dbDeveloper,
-        });
-      });
+      .get('/api/tasks')
+      .expect(200)
+      .expect({ tasks: await app.get(TaskService).getAllTasks() });
   });
+
 
 
 

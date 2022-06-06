@@ -17,6 +17,12 @@ export class TaskService {
     private readonly SprintRepo: Repository<SprintEntity>,
   ) {}
 
+  async getAllTasks(): Promise<TaskDto[]> {
+    const tasks = await this.taskRepo.find({ where :{} });
+    return tasks.map((task) => toTaskDto(task));
+  }
+
+
   async getTask(id: string): Promise<TaskDto> {
     const task: TaskEntity = await this.taskRepo.findOne({ where: { id } });
 
