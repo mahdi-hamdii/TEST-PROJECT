@@ -4,8 +4,7 @@ import * as request from 'supertest';
 import { AppModule } from './../src/app.module';
 import { SprintService } from './../src/sprint/sprint.service';
 import { DeveloperDto } from '../src/sprint/dto/developer.dto';
-import { DevelopersService } from '../src/sprint/developers.service';
-import { TaskService } from '@sprint/task/task.service';
+import { TaskService } from '../src/sprint/task/task.service';
 
 describe('AppController (e2e)', () => {
   let app: INestApplication;
