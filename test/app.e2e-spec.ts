@@ -21,10 +21,13 @@ describe('AppController (e2e)', () => {
 
     app = moduleFixture.createNestApplication();
     await app.init();
-    dbDeveloper = await app
-      .get<DevelopersService>(DevelopersService)
-      .findOne({ developername: developer.developername });
+    dbDeveloper = {
+      id: '57603cd2-533c-4791-8adc-cf3ac1448b7d',
+  developername: 'Hamdi.Mahdi',
+  email: 'mahdihamdi@live.fr',
+    }
   });
+
 
   it('/ (GET)', () => {
     return request(app.getHttpServer())
